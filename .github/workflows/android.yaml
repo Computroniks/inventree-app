@@ -34,7 +34,7 @@ jobs:
     - name: Build for Android
       run: |
         flutter pub get
-        flutter build apk
+        flutter build apk --no-tree-shake-icons
     - uses: actions/upload-artifact@v1
       with:
         name: release-apk
